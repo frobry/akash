@@ -20,6 +20,22 @@
       <div class="bottom-app"></div>
       <a class="buttons" href="historique.html">Consulter mon historique</a>
     </main>
+    <script>
+   // Détecter si l'utilisateur est sur un appareil iOS
+   var isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+   // Activer le mode plein écran si l'utilisateur est sur un appareil iOS
+   if (isIos) {
+      var elem = document.documentElement;
+      if (elem.requestFullscreen) {
+         elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+         elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+         elem.msRequestFullscreen();
+      }
+   }
+   </script>
   </body>
 </html>
 
